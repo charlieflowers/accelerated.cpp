@@ -1,0 +1,8 @@
+.o/
+.o
+.metadata/
+RemoteSystemsTempFiles/
+.DS_Store/
+Debug/
+**/.DS_Store/
+**.DS_Store
