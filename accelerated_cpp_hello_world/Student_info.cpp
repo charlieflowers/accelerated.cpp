@@ -9,6 +9,7 @@
 //  includes in the source file! (Maybe even none other than the header you're implementing)
 
 #include "Student_info.h";
+#include "grade.h";
 
 using std::istream;
 using std::vector;
@@ -19,9 +20,18 @@ bool compare(const Student_info& left, const Student_info& right) {
 
 istream& read(istream& is, Student_info& s)
 {
-	is >> s.name >> s.midterm >> s.final;
+	is >> s.name;
 
-	read_hw(is, s.homework);
+	double midterm;
+	double final;
+
+	is >> midterm >> final;
+
+	vector<double> homework;
+	read_hw(is, homework);
+
+	s.final_grade = grade(midterm, final, homework);
+
 	return is;
 }
 
