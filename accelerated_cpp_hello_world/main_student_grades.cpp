@@ -44,14 +44,14 @@ int main() {
 	for(vec_sz c = 0; c != count; c++) {
 		cout << students[c].name << string(longest + 1 - students[c].name.size(), ' ');
 
-		try {
+		// try {
 			double final_grade = grade(students[c]);
 
 			streamsize prec = cout.precision();
 			cout << setprecision(3) << final_grade << setprecision(prec);
-		} catch(domain_error& e) {
-			cout << "An error occurred: " << e.what();
-		}
+//		} catch(domain_error& e) {
+//			cout << "An error occurred: " << e.what();
+//		}
 
 		cout << endl;
 	}
