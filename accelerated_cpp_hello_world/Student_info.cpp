@@ -12,7 +12,8 @@
 #include "grade.h";
 
 using std::istream;
-using std::vector;
+using std::vector;		using std::cout;
+using std::endl;
 
 bool compare(const Student_info& left, const Student_info& right) {
 	return left.name < right.name;
@@ -22,15 +23,23 @@ istream& read(istream& is, Student_info& s)
 {
 	is >> s.name;
 
+	cout << "got the name! " << s.name << endl;
+
 	double midterm;
 	double final;
 
 	is >> midterm >> final;
 
+	cout << "Got midterm: " << midterm << endl;
+	cout << "Got final: " << final << endl;
+
 	vector<double> homework;
 	read_hw(is, homework);
 
 	s.final_grade = grade(midterm, final, homework);
+
+	cout << "Read " << homework.size() << " hw grades." << endl;
+	cout << "calcd final grade of " << s.final_grade << endl;
 
 	return is;
 }
