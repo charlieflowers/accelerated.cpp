@@ -91,13 +91,11 @@ container_type hcat(const container_type& left, const container_type& right) {
 
     typedef  container_type::size_type vec_sz;
 
-    // vec_sz longest_vec_size = max(left.size(), right.size());
-
     string::size_type longest_string_on_left = longest_string_width(left);
 
     container_type::const_iterator left_iter = left.begin(), right_iter = right.begin();
 
-    while(left_iter != left.end() && right_iter != right.end()) {
+    while(left_iter != left.end() || right_iter != right.end()) {
 
         string new_entry;
 
