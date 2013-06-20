@@ -7,6 +7,7 @@
 using std::string;          using std::vector;
 using std::isspace;         using std::cout;
 using std::endl;            using std::min;
+using std::max;             using std::ostream;
 
 vector<string> split(const string& text) {
 
@@ -40,4 +41,44 @@ vector<string> split(const string& text) {
     }
 
     return result;
+}
+
+string::size_type longest_string_width(const vector<string>& vec){
+
+    string::size_type result = 0;
+
+    for(vector<string>::const_iterator iter = vec.begin();
+        iter != vec.end(); iter++) {
+            result = max(result, iter->size());
+        }
+
+    return result;
+}
+
+vector<string> frame(const vector<string>& vec) {
+    vector<string> result;
+
+    string::size_type longest = longest_string_width(vec);
+
+    string border = string(longest + 4, '*');
+
+    result.push_back(border);
+
+    for(vector<string>::const_iterator iter = vec.begin();
+        iter != vec.end(); iter++) {
+            string spaces = string(longest - (iter->size()), ' ');
+            result.push_back("* " + (*iter) + spaces + " *");
+        }
+
+    result.push_back(border);
+
+    return result;
+}
+
+ostream& write_strings(ostream& os, const vector<string>& strings) {
+    for(vector<string>::const_iterator iter = strings.begin();
+            iter != strings.end(); iter++) {
+                os << (*iter) << endl;
+            }
+    return os;
 }

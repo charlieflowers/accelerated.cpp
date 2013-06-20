@@ -32,6 +32,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="../chapter_5_primary/string.cpp" />
+		<Unit filename="../chapter_5_primary/string.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

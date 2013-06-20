@@ -1,16 +1,18 @@
 # depslib dependency file v1.0
-1371693832 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.cpp
+1371710071 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.cpp
 	<string>
 	<vector>
 	<cctype>
 	<iostream>
+	<algorithm>
 
-1371694105 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/main.cpp
+1371708875 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/main.cpp
 	<iostream>
 	<vector>
 	"../chapter_5_primary/string.h"
 
-1371693596 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.h
+1371708729 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.h
 	<vector>
 	<string>
+	<iostream>
 
