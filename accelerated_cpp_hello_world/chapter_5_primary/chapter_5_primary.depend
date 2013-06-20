@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1371690873 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/grade.cpp
+	<stdexcept>
+	<vector>
+	"grade.h"
+	"median.h"
+	"Student_info.h"
+
+1371690850 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/grade.h
+	<vector>
+	"Student_info.h"
+
+1371690566 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/Student_info.h
+	<iostream>
+	<vector>
+	<string>
+
+1371583641 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/median.h
+	<vector>
+
+1371584006 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/median.cpp
+	<vector>
+	<stdexcept>
+	"median.h"
+
+1371690555 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/Student_info.cpp
+	"Student_info.h"
+
+1371691062 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/main.cpp
+	<iostream>
+	<iomanip>
+	<vector>
+	<algorithm>
+	<stdexcept>
+	"../grade.h"
+	"../median.h"
+	"../Student_info.h"
+

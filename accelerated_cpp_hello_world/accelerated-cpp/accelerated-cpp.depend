@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1371682203 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/accelerated-cpp/main.cpp
+	<iostream>
+
+1371596892 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/read_words.cpp
+	"read_words.h"
+
+1371596642 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/read_words.h
+	<iostream>
+	<vector>
+	<string>
+
+1371682594 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/main_count_each_word.cpp
+	<vector>
+	<iostream>
+	<string>
+	<algorithm>
+	"read_words.h"
+
