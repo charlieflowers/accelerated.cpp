@@ -82,3 +82,63 @@ ostream& write_strings(ostream& os, const vector<string>& strings) {
             }
     return os;
 }
+
+vector<string> hcat(const vector<string>& left, const vector<string>& right) {
+
+    vector<string> result;
+
+    typedef  vector<string>::size_type vec_sz;
+
+    vec_sz longest_vec_size = max(left.size(), right.size());
+
+    string::size_type longest_string_on_left = longest_string_width(left);
+
+    for(vec_sz i = 0; i != longest_vec_size; ++i) {
+
+        string new_entry;
+
+        if(i < left.size()) {
+            // We have a left-hand item to write.
+            new_entry = left[i] + string(longest_string_on_left - left[i].size(), ' ');
+        } else {
+            new_entry = string(longest_string_on_left, ' '); // todo these can be consolidated.
+        }
+
+        if(i < right.size()) {
+            // We have a righht hand item to write.
+            new_entry += " " + right[i];
+        }
+
+        result.push_back(new_entry);
+    }
+
+    return result;
+}
+
+vector<string> vcat(const vector<string>& top, const vector<string>& bottom) {
+    vector<string> result;
+
+    // First, just completely copy the top!
+    result = top;
+
+    result.insert(result.end(), bottom.begin(), bottom.end());
+
+    return result;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

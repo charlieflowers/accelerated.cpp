@@ -34,7 +34,15 @@ int main()
 
         write_strings(cout, frame(result)) << endl;
 
+        vector<string> another_vec = split("This is yet another vector that is just ripe for the splitting");
 
+        cout << "Here are 2 vectors hcated " << endl;
+
+        write_strings(cout, hcat(result, another_vec));
+
+        cout << "And now here they are vcated: " << endl;
+
+        write_strings(cout, vcat(result, another_vec));
     }
 
     return 0;
