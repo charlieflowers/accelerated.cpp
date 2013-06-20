@@ -17,4 +17,5 @@ std::istream& read(std::istream&, Student_info&);
 
 std::istream& read_hw(std::istream&, std::vector<double>&);
 
+
 #endif /* STUDENT_INFO_H_ */

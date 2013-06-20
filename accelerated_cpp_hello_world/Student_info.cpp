@@ -11,7 +11,9 @@
 #include "Student_info.h";
 
 using std::istream;
+
 using std::vector;
+using std::endl;
 
 bool compare(const Student_info& left, const Student_info& right) {
 	return left.name < right.name;
