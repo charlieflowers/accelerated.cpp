@@ -4,14 +4,16 @@
 #include <iostream>;
 #include <algorithm>;
 
+#include "../chap_5_string_stuff/charlie_container_type.h";
+
 using std::string;          using std::vector;
 using std::isspace;         using std::cout;
 using std::endl;            using std::min;
 using std::max;             using std::ostream;
 
-vector<string> split(const string& text) {
+container_type split(const string& text) {
 
-    vector<string> result;
+    container_type result;
 
     string::size_type i = 0, j = 0;
 
@@ -43,11 +45,11 @@ vector<string> split(const string& text) {
     return result;
 }
 
-string::size_type longest_string_width(const vector<string>& vec){
+string::size_type longest_string_width(const container_type& vec){
 
     string::size_type result = 0;
 
-    for(vector<string>::const_iterator iter = vec.begin();
+    for(container_type::const_iterator iter = vec.begin();
         iter != vec.end(); iter++) {
             result = max(result, iter->size());
         }
@@ -55,8 +57,8 @@ string::size_type longest_string_width(const vector<string>& vec){
     return result;
 }
 
-vector<string> frame(const vector<string>& vec) {
-    vector<string> result;
+container_type frame(const container_type& vec) {
+    container_type result;
 
     string::size_type longest = longest_string_width(vec);
 
@@ -64,7 +66,7 @@ vector<string> frame(const vector<string>& vec) {
 
     result.push_back(border);
 
-    for(vector<string>::const_iterator iter = vec.begin();
+    for(container_type::const_iterator iter = vec.begin();
         iter != vec.end(); iter++) {
             string spaces = string(longest - (iter->size()), ' ');
             result.push_back("* " + (*iter) + spaces + " *");
@@ -75,38 +77,42 @@ vector<string> frame(const vector<string>& vec) {
     return result;
 }
 
-ostream& write_strings(ostream& os, const vector<string>& strings) {
-    for(vector<string>::const_iterator iter = strings.begin();
+ostream& write_strings(ostream& os, const container_type& strings) {
+    for(container_type::const_iterator iter = strings.begin();
             iter != strings.end(); iter++) {
                 os << (*iter) << endl;
             }
     return os;
 }
 
-vector<string> hcat(const vector<string>& left, const vector<string>& right) {
+container_type hcat(const container_type& left, const container_type& right) {
 
-    vector<string> result;
+    container_type result;
 
-    typedef  vector<string>::size_type vec_sz;
+    typedef  container_type::size_type vec_sz;
 
-    vec_sz longest_vec_size = max(left.size(), right.size());
+    // vec_sz longest_vec_size = max(left.size(), right.size());
 
     string::size_type longest_string_on_left = longest_string_width(left);
 
-    for(vec_sz i = 0; i != longest_vec_size; ++i) {
+    container_type::const_iterator left_iter = left.begin(), right_iter = right.begin();
+
+    while(left_iter != left.end() && right_iter != right.end()) {
 
         string new_entry;
 
-        if(i < left.size()) {
+        if(left_iter != left.end()) {
             // We have a left-hand item to write.
-            new_entry = left[i] + string(longest_string_on_left - left[i].size(), ' ');
+            new_entry = (*left_iter) + string(longest_string_on_left - left_iter->size(), ' ');
+            left_iter++;
         } else {
             new_entry = string(longest_string_on_left, ' '); // todo these can be consolidated.
         }
 
-        if(i < right.size()) {
+        if(right_iter != right.end()) {
             // We have a righht hand item to write.
-            new_entry += " " + right[i];
+            new_entry += " " + (*right_iter);
+            right_iter++;
         }
 
         result.push_back(new_entry);
@@ -115,8 +121,8 @@ vector<string> hcat(const vector<string>& left, const vector<string>& right) {
     return result;
 }
 
-vector<string> vcat(const vector<string>& top, const vector<string>& bottom) {
-    vector<string> result;
+container_type vcat(const container_type& top, const container_type& bottom) {
+    container_type result;
 
     // First, just completely copy the top!
     result = top;

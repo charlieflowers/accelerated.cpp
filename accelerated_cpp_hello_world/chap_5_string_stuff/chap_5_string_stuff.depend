@@ -1,18 +1,25 @@
 # depslib dependency file v1.0
-1371765341 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.cpp
+1371768231 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.cpp
 	<string>
 	<vector>
 	<cctype>
 	<iostream>
 	<algorithm>
+	"../chap_5_string_stuff/charlie_container_type.h"
 
-1371765380 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/main.cpp
+1371767846 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/main.cpp
 	<iostream>
 	<vector>
 	"../chapter_5_primary/string.h"
+	"charlie_container_type.h"
 
-1371765310 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.h
+1371768489 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chapter_5_primary/string.h
 	<vector>
 	<string>
 	<iostream>
+	"../chap_5_string_stuff/charlie_container_type.h"
+
+1371767923 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/charlie_container_type.h
+	<vector>
+	<list>
 

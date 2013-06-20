@@ -5,16 +5,18 @@
 #include <string>;
 #include <iostream>;
 
-std::vector<std::string> split(const std::string&);
+#include "../chap_5_string_stuff/charlie_container_type.h"
 
-std::string::size_type longest_string_width(const std::vector<std::string>&);
+container_type split(const std::string&);
 
-std::vector<std::string> frame(const std::vector<std::string>&);
+std::string::size_type longest_string_width(const container_type&);
 
-std::ostream& write_strings(std::ostream&, const std::vector<std::string>&);
+container_type frame(const container_type&);
 
-std::vector<std::string> hcat(const std::vector<std::string>&, const std::vector<std::string>&);
+std::ostream& write_strings(std::ostream&, const container_type&);
 
-std::vector<std::string> vcat(const std::vector<std::string>&, const std::vector<std::string>&);
+container_type hcat(const container_type&, const container_type&);
+
+container_type vcat(const container_type&, const container_type&);
 
 #endif // MAIN_H_INCLUDED

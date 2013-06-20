@@ -3,6 +3,7 @@
 
 
 #include "../chapter_5_primary/string.h";
+#include "charlie_container_type.h";
 
 using std::cout;            using std::endl;
 using std::string;          using std::vector;
@@ -19,11 +20,11 @@ int main()
     while(getline(cin, to_split)){
         cout << "Heres the input: " << to_split << endl;
 
-        vector<string> result = split(to_split);
+        container_type result = split(to_split);
 
         cout << "The result has " << result.size() << " words" << " and here they are: " << endl;
 
-        for(vector<string>::iterator iter = result.begin();
+        for(container_type::iterator iter = result.begin();
             iter != result.end(); iter++) {
                 cout << (*iter) << endl;
             }
@@ -34,7 +35,7 @@ int main()
 
         write_strings(cout, frame(result)) << endl;
 
-        vector<string> another_vec = split("This is yet another vector that is just ripe for the splitting");
+        container_type another_vec = split("This is yet another vector that is just ripe for the splitting");
 
         cout << "Here are 2 vectors hcated " << endl;
 
