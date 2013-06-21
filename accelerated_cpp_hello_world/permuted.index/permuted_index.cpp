@@ -62,10 +62,10 @@ list<Index_entry> build_index(const string& s) {
     vec_sz number_of_rotations_needed = rotatable.size();
     // It's not really a rotatable until the next line:
     rotatable.insert(rotatable.begin(), BEGIN_SENTINEL);
+    container_type this_rotation = rotatable; // copy original rotatable so we can make chgs.
     
     for(vec_sz i = 0; i != number_of_rotations_needed; ++i) {
         
-        container_type this_rotation = rotatable; // copy original rotatable so we can make chgs.
         string item = *this_rotation.begin();
         this_rotation.erase(this_rotation.begin());
         this_rotation.push_back(item);
