@@ -35,6 +35,7 @@
 		34B6F55C1774088A007731D1 /* string.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = string.h; path = permuted.index/string.h; sourceTree = "<group>"; };
 		34B6F55E177408AF007731D1 /* Index_entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Index_entry.h; path = permuted.index/Index_entry.h; sourceTree = "<group>"; };
 		34B6F55F17740BCA007731D1 /* permuted_index.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = permuted_index.cpp; sourceTree = "<group>"; };
+		34B6F56117749902007731D1 /* permuted_index.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = permuted_index.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				34B6F55F17740BCA007731D1 /* permuted_index.cpp */,
+				34B6F56117749902007731D1 /* permuted_index.h */,
 				34B6F55E177408AF007731D1 /* Index_entry.h */,
 				34B6F558177407D6007731D1 /* main.cpp */,
 				34B6F55A1774088A007731D1 /* charlie_container_type.h */,

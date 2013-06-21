@@ -2,20 +2,27 @@
 
 #include "charlie_container_type.h"
 #include "string.h"
+#include "permuted_index.h"
 
-using namespace std;
+using std::cout;            using std::endl;
 
 int main()
 {
     cout << "Hello world!" << endl;
     
-    string x = "split this you motherfucking asshole";
+    container_type phrases;
+    phrases.push_back("The quick brown fox");
+    phrases.push_back("jumped over the fence");
     
-    container_type s = split(x);
+    cout << "Here's the list of phrases we'll index: " << endl;
     
-    cout << "Here's the split of " << x << endl;
+    write_strings(cout, phrases);
     
-    write_strings(cout, s);
+    list<Index_entry> index = build_index(phrases);
     
+    cout << "Here's the permuted index: " << endl;
+    
+    to_stream(cout, index);
+        
     return 0;
 }
