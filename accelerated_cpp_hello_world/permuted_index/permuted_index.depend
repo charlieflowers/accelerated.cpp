@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1371771099 source:/Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/permuted_index/main.cpp
+	<iostream>
+	"../chap_5_string_stuff/charlie_container_type.h"
+
+1371767923 /Users/cflowers/Dropbox/learn.cpp/accelerated_cpp_hello_world/chap_5_string_stuff/charlie_container_type.h
+	<vector>
+	<list>
+
