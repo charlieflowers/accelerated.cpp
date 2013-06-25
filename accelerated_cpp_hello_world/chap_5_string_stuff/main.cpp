@@ -11,6 +11,10 @@ using std::getline;         using std::cin;
 
 int main()
 {
+    cout << "Here's what you get from framing an empty vector: " << endl;
+    container_type x;
+    write_strings(cout, frame(x)) << endl;
+
     cout << "Enter a line of text: " << endl;
 
     string to_split;

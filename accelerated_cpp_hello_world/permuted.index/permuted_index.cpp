@@ -11,7 +11,7 @@
 
 using std::string;          using std::domain_error;
 using std::ostream;         using std::endl;
-using std::cout;
+using std::cout;            using std::tolower;
 
 const string BEGIN_SENTINEL = "BEGIN_SENTINEL";
 
